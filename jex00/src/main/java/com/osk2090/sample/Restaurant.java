@@ -1,0 +1,16 @@
+package com.osk2090.sample;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import lombok.Data;
+import lombok.Setter;
+
+@Component
+@Data
+public class Restaurant {
+	
+@Setter(onMethod=@Autowired)
+private Chef chef;
+
+}

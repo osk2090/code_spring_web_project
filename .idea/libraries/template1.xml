@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="template1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/.metadata/.sts/content/org.springframework.templates.mvc-3.2.2/template.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
