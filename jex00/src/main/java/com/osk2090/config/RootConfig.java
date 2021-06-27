@@ -4,6 +4,7 @@ import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -12,6 +13,7 @@ import javax.sql.DataSource;
 
 @Configuration
 @ComponentScan(basePackages = {"com.osk2090.sample"})
+@MapperScan(basePackages = {"com.osk2090.mapper"})
 public class RootConfig {
 
     @Bean
