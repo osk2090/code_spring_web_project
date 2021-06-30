@@ -1,13 +1,15 @@
 package com.osk2090.controller;
 
 import com.osk2090.domain.SampleDTO;
+import com.osk2090.domain.SampleDTOList;
+import com.osk2090.domain.TodoDTO;
 import lombok.extern.log4j.Log4j;
+import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.*;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -57,5 +59,24 @@ public class SampleController {
     public String ex02Array(@RequestParam("ids") String[] ids) {
         log.info("array ids: " + Arrays.toString(ids));
         return "ex02Array";
+    }
+
+    @GetMapping("/ex02Bean")
+    public String ex02Bean(SampleDTOList list) {
+        log.info("list dto: " + list);
+        return "ex02Bean";
+    }
+
+//    @InitBinder
+//    public void initBinder(WebDataBinder binder) {
+//        SimpleDateFormat dataFormat = new SimpleDateFormat("yyyy-MM-dd");
+//        binder.registerCustomEditor(java.util.Date.class,
+//                new CustomDateEditor(dataFormat, false));
+//    }
+
+    @GetMapping("/ex03")
+    public String ex03(TodoDTO todo) {
+        log.info("todo: " + todo);
+        return "ex03";
     }
 }
