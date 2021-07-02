@@ -11,6 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -112,5 +113,19 @@ public class SampleController {
         HttpHeaders header = new HttpHeaders();
         header.add("Content-Type", "application/json;charset=UTF-8");
         return new ResponseEntity<>(msg, header, HttpStatus.OK);
+    }
+
+    @GetMapping("/exUpload")
+    public void exUpload() {
+        log.info("/exUpload.............");
+    }
+
+    @PostMapping("/exUploadPost")
+    public void exUploadPost(ArrayList<MultipartFile> files) {
+        files.forEach(file->{
+            log.info("-------------------------------------");
+            log.info("name" + file.getOriginalFilename());
+            log.info("size" + file.getSize());
+        });
     }
 }
