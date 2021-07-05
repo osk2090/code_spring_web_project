@@ -22,6 +22,6 @@ public class WebConfig extends AbstractAnnotationConfigDispatcherServletInitiali
 
     @Override
     protected void customizeRegistration(ServletRegistration.Dynamic registration) {
-        registration.setInitParameter("throwExceptionIfNoHandler", "true");
+        registration.setInitParameter("throwExceptionIfNoHandlerFound", "true");
     }
 }
