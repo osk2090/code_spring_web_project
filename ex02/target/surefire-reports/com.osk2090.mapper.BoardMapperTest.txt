@@ -1,11 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.osk2090.mapper.BoardMapperTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.563 sec <<< FAILURE! - in com.osk2090.mapper.BoardMapperTest
-testGetList(com.osk2090.mapper.BoardMapperTest)  Time elapsed: 0.001 sec  <<< ERROR!
-java.lang.IllegalStateException: Failed to load ApplicationContext
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in com.osk2090.config.RootConfig: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.sql.DataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.ExceptionInInitializerError
-Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.sql.DataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.ExceptionInInitializerError
-Caused by: java.lang.ExceptionInInitializerError
-Caused by: java.lang.IllegalArgumentException: spyLogDelegatorName does not allow to load a valid SpyLogDelegator: net.sf.log4jdbc.log.slf4j.S1f4jSpyLogDelegator
-
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.6 sec - in com.osk2090.mapper.BoardMapperTest
