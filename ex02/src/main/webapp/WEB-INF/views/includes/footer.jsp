@@ -6,13 +6,10 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-</div>
-<!-- /#page-wrapper -->
 
-</div>
-<!-- /#wrapper -->
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!-- Bootstrap Core CSS -->
+<%--<script src="../resources/vendor/jquery/jquery.min.js"></script>--%>
+<link href="../resources/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 <!-- Bootstrap Core JavaScript -->
 <script src="../resources/vendor/bootstrap/js/bootstrap.min.js"></script>
@@ -34,9 +31,9 @@
         $('#dataTables-example').DataTable({
             responsive: true
         });
+        $(".sidebar-nav")
+            .attr("class", "sidebar-nav navbar-collapse collapse")
+            .attr("aria-expanded", "false")
+            .attr("style", "height:1px");
     });
 </script>
-
-</body>
-
-</html>
