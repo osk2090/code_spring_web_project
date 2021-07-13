@@ -9,7 +9,7 @@
 
 <!-- Bootstrap Core CSS -->
 <%--<script src="../resources/vendor/jquery/jquery.min.js"></script>--%>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link href="../resources/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 <!-- Bootstrap Core JavaScript -->
 <script src="../resources/vendor/bootstrap/js/bootstrap.min.js"></script>
