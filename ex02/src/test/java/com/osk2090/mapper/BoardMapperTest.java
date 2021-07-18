@@ -1,6 +1,7 @@
 package com.osk2090.mapper;
 
 import com.osk2090.domain.BoardVO;
+import com.osk2090.domain.Criteria;
 import lombok.Setter;
 import lombok.extern.log4j.Log4j;
 import org.junit.Test;
@@ -8,6 +9,8 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+import java.util.List;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = {com.osk2090.config.RootConfig.class})
@@ -66,5 +69,16 @@ public class BoardMapperTest {
 
         int count = mapper.update(boardVO);
         log.info("UPDATE COUNT: " + count);
+    }
+
+    @Test
+    public void testPaging() {
+        Criteria cri = new Criteria();
+        //10개씩 3페이지
+        cri.setPageNum(2);
+        cri.setAmount(10);
+
+        List<BoardVO> list = mapper.getListWithPaging(cri);
+        list.forEach(board -> log.info(board.getBno()));
     }
 }

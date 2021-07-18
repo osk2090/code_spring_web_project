@@ -1,5 +1,7 @@
 package com.osk2090.controller;
 
+import com.osk2090.domain.BoardVO;
+import com.osk2090.domain.Criteria;
 import lombok.Setter;
 import lombok.extern.log4j.Log4j;
 import org.junit.Before;
@@ -13,6 +15,8 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
+
+import java.util.List;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @WebAppConfiguration
@@ -69,7 +73,7 @@ public class BoardControllerTests {
     }
 
     @Test
-    public void testRemove()throws Exception {
+    public void testRemove() throws Exception {
         //삭제전 데이터베이스에 게시물 번호 확인할 것
         String resultPage = mockMvc.perform(MockMvcRequestBuilders.post("/board/remove").param("bno", "23"))
                 .andReturn().getModelAndView().getViewName();
