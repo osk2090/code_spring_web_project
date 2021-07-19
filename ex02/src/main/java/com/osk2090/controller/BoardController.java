@@ -2,6 +2,7 @@ package com.osk2090.controller;
 
 import com.osk2090.domain.BoardVO;
 import com.osk2090.domain.Criteria;
+import com.osk2090.domain.PageDTO;
 import com.osk2090.service.BoardService;
 import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j;
@@ -30,6 +31,7 @@ public class BoardController {
     public void list(Criteria cri, Model model) {
         log.info("list: " + cri);
         model.addAttribute("list", service.getList(cri));
+        model.addAttribute("pageMaker", new PageDTO(cri, 123));
     }
 
     @PostMapping("/register")
