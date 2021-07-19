@@ -1,6 +1,7 @@
 package com.osk2090.service;
 
 import com.osk2090.domain.BoardVO;
+import com.osk2090.domain.Criteria;
 import lombok.Setter;
 import lombok.extern.log4j.Log4j;
 import org.junit.Test;
@@ -39,7 +40,8 @@ public class BoardServiceTests {
 
     @Test
     public void testGetList() {
-        service.getList().forEach(board -> log.info(board));
+//        service.getList().forEach(board -> log.info(board));
+        service.getList(new Criteria(2, 10)).forEach(board -> log.info(board));
     }
 
     @Test

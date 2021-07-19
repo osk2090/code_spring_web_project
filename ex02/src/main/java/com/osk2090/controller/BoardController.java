@@ -1,6 +1,7 @@
 package com.osk2090.controller;
 
 import com.osk2090.domain.BoardVO;
+import com.osk2090.domain.Criteria;
 import com.osk2090.service.BoardService;
 import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j;
@@ -19,10 +20,16 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 public class BoardController {
     private BoardService service;
 
+//    @GetMapping("/list")
+//    public void list(Model model) {
+//        log.info("list");
+//        model.addAttribute("list", service.getList());
+//    }
+
     @GetMapping("/list")
-    public void list(Model model) {
-        log.info("list");
-        model.addAttribute("list", service.getList());
+    public void list(Criteria cri, Model model) {
+        log.info("list: " + cri);
+        model.addAttribute("list", service.getList(cri));
     }
 
     @PostMapping("/register")
