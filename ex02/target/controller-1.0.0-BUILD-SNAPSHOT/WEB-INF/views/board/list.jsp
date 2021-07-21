@@ -53,9 +53,6 @@
                 </table>
 
                 <div class="pull-right">
-                    <form id="actionForm" action="../board/list" method="get">
-                        <input type='hidden' name='pageNum' value='${pageMaker.cri.pageNum}'>
-                        <input type='hidden' name='amount' value='${pageMaker.cri.amount}'>
 
                     <ul class="pagination">
                         <c:if test="${pageMaker.prev}">
@@ -76,8 +73,12 @@
                             </li>
                         </c:if>
                     </ul>
-                    </form>
                 </div>
+
+                <form id="actionForm" action="../board/list" method="get">
+                    <input type='hidden' name='pageNum' value='${pageMaker.cri.pageNum}'>
+                    <input type='hidden' name='amount' value='${pageMaker.cri.amount}'>
+                </form>
             </div>
         </div>
     </div>
@@ -112,7 +113,7 @@
             history.replaceState({}, null, null);
 
             function checkModal(result) {
-                if (result === '' || history.state) {
+                if (result === ' ' || history.state) {
                     return;
                 }
 
@@ -127,7 +128,7 @@
                 self.location = "../board/register";
             });
 
-            var actionForm = ${"#actionForm"};
+            var actionForm = $("#actionForm");
             $(".paginate_button a").on("click", function (e) {
                 e.preventDefault();
                 console.log('click');
