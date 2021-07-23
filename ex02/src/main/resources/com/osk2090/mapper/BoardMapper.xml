@@ -55,7 +55,18 @@
                      regdate,
                      updatedate
                  from tbl_board
-                 where rownum <= #{pageNum} * #{amount}
+                 where ]]>
+                       <trim prefix="("suffix=") and " prefixOverrides="or">
+                           <foreach collection="typeArr" item="type">
+                               <trim prefix="or">
+                                   <choose>
+                                       <when test=""></when>
+                                   </choose>
+                               </trim>
+                           </foreach>
+                       </trim>
+                       
+                       rownum <= #{pageNum} * #{amount}
              )
         where rn > (#{pageNum} - 1) * #{amount}
     ]]>
