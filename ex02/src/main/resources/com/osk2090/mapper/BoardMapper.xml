@@ -72,7 +72,7 @@
         from tbl_board
         where
         <include refid="criteria"></include>
-        bno > 0;
+        bno > 0
     </select>
 
     <sql id="criteria">
