@@ -49,5 +49,4 @@ public class SampleControllerTests {
                 .content(jsonStr))
                 .andExpect(status().is(200));
     }
-
 }
