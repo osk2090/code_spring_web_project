@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/.metadata/.metadata.iml" filepath="$PROJECT_DIR$/.metadata/.metadata.iml" />
       <module fileurl="file://$PROJECT_DIR$/ex00/ex00.iml" filepath="$PROJECT_DIR$/ex00/ex00.iml" />
       <module fileurl="file://$PROJECT_DIR$/jex00/jex00.iml" filepath="$PROJECT_DIR$/jex00/jex00.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/controller.iml" filepath="$PROJECT_DIR$/controller.iml" />
+>>>>>>> cbb4b9a (fix)
     </modules>
   </component>
 </project>
