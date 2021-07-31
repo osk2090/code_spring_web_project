@@ -15,11 +15,8 @@ import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
-<<<<<<< HEAD
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
-=======
->>>>>>> a1ab3a837f06d2e4a0d6f65d67bc9f56d4902645
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @WebAppConfiguration
@@ -54,8 +51,4 @@ public class SampleControllerTests {
                 .content(jsonStr))
                 .andExpect(status().is(200));
     }
-<<<<<<< HEAD
-
-=======
->>>>>>> a1ab3a837f06d2e4a0d6f65d67bc9f56d4902645
 }
