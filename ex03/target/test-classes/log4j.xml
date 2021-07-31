@@ -11,7 +11,7 @@
 	</appender>
 	
 	<!-- Application Loggers -->
-	<logger name="com.osk2090.controller">
+	<logger name="com.com.osk2090.controller">
 		<level value="info" />
 	</logger>
 	
