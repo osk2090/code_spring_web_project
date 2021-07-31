@@ -2,6 +2,7 @@ package com.osk2090.mapper;
 
 import com.osk2090.domain.BoardVO;
 import com.osk2090.domain.Criteria;
+import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
 

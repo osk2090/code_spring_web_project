@@ -4,7 +4,9 @@ import com.osk2090.domain.BoardVO;
 import com.osk2090.domain.Criteria;
 import com.osk2090.mapper.BoardMapper;
 import lombok.AllArgsConstructor;
+import lombok.Setter;
 import lombok.extern.log4j.Log4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
